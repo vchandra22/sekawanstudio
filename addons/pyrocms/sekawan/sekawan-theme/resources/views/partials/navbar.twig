@@ -12,9 +12,9 @@
   </div>
 </div>
 <nav class="bg-white border-b border-gray-300">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pl-4">
-        <a href="{{ url("/") }}" class="flex items-center w-1/3">
-            {{ img('theme::img/logo-sekawan.png').class('w-auto md:w-1/4 xl:w-1/4').alt('Sekawan Media Logo')|raw }}
+    <div class="max-w-screen-xl flex h-full flex-wrap items-center justify-between mx-auto pl-4">
+        <a href="{{ url("/") }}" class="flex items-center w-1/3 my-3">
+            {{ img('theme::img/logo-sekawan.png').class('w-auto md:w-[128px] xl:w-[128px]').alt('Sekawan Media Logo')|raw }}
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -29,37 +29,37 @@
         <div class="group">
             <div id="main-nav" class="hidden w-full md:block md:w-auto z-50" id="navbar-default">
                 <ul
-                    class="font-medium flex flex-col items-center p-4 md:space-x-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    class="font-medium h-full h-16 flex flex-col items-center px-4 md:space-x-6 md:p-0 mt-4 md:flex-row md:mt-0 md:border-0 md:bg-white h-full">
                     {# {% for link in links('navbar').get() %}
                         <li class="flex items-center group">
                             <a href="{{ link.url }}" target={{ link.target }} class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">{{ link.title }}</a>
                             <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover:rotate-0 group-hover:text-blue-700"></i>
                         </li>
                     {% endfor %} #}
-                    <li class="flex items-center group/layanan">
-                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Layanan</a>
-                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover/layanan:rotate-0 group-hover/layanan:text-blue-700"></i>
-                        <div id="dropdown" class="hidden group md:hidden group-hover/layanan:md:block bg-white absolute w-full transform left-0 top-0 mt-[88px] z-20 group/layanan:transition group/layanan:duration-300 group/layanan:ease-in-out group/layanan:transform group/layanan:origin-top">
-                            <div class="max-w-screen-xl mx-auto p-12 grid grid-cols-3">
-                                <div class="col-span-2">
-                                    <h3 class="text-start text-3xl text-black font-medium">Layanan</h3>
-                                    <div class="pr-8">
-                                        <hr class="my-4 border-gray-500 sm:mx-auto lg:my-8"/>
+                    <li class="flex items-center group/layanan h-16">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover/layanan:text-blue-700 md:p-0 md:space-x-4">Layanan</a>
+                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-[#102E61] rotate-180 group-hover/layanan:rotate-0 group-hover/layanan:text-blue-700"></i>
+                        <div id="dropdown" class="hidden group md:hidden group-hover/layanan:md:block bg-white absolute w-full transform left-0 top-0 mt-[90px] z-50 group/layanan:transition group/layanan:duration-300 group/layanan:ease-in-out group/layanan:transform group/layanan:origin-top">
+                            <div class="max-w-screen-xl mx-auto p-10 grid grid-cols-3">
+                                <div class="col-span-2 space-y-8">
+                                    <h3 class="text-start text-xl text-[#102E61] font-semibold uppercase">Layanan</h3>
+                                    <div class="pr-20">
+                                        <hr class="my-4 border-gray-300 sm:mx-auto"/>
                                     </div>
                                     <div class="grid grid-cols-2 items-center">
                                         <div class="cols-1 space-y-12">
-                                            <p>Melayani berbagai kebutuhan pembuatan aplikasi dan website yang menjangkau area UMKM hingga bisnis berskala Enterprise.</p>
+                                            <p class="font-normal">Melayani berbagai kebutuhan pembuatan aplikasi dan website yang menjangkau area UMKM hingga bisnis berskala Enterprise.</p>
                                             <div class="flex justify-between items-end">
                                                 <div class="relative group/selengkapnya space-y-1">
                                                     <a href="" class="uppercase text-lg font-regular w-1/4 text-blue-950">
                                                         Selengkapnya
                                                     </a>
-                                                    <div class="absolute left-0 right-0 h-[3px] bg-blue-950 w-1/3 hover:transition group-hover/selengkapnya:duration-1000 group-hover/selengkapnya:ease-in-out group-hover/selengkapnya:w-full"></div>
+                                                    <div class="absolute left-0 right-0 h-[3px] bg-[#102E61] w-1/3 hover:transition group-hover/selengkapnya:duration-1000 group-hover/selengkapnya:ease-in-out group-hover/selengkapnya:w-full"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     <div class="cols-1 mx-4">
-                                        <ul class="space-y-8">
+                                        <ul class="space-y-8 font-normal">
                                             <li>
                                                 <a href="#" class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
                                                     Jasa Pembuatan Aplikasi Web
@@ -79,24 +79,174 @@
                                     </div>
                                 </div>
                                 </div>
-                                <div class="col-1">
-                                    {{ img('theme::img/carousel-img_2.jpg').class('w-full h-full object-cover bg-cover').alt('Sekawan Media Logo')|raw }}
+                                <div class="col-1 mx-auto space-y-4">
+                                    <div>
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-[#102E61] bg-opacity-50"></div>
+                                            {{ img('theme::img/carousel-img_2.jpg').class('w-[410px] h-[190px] object-cover bg-cover').alt('Sekawan Media Logo')|raw }}
+                                            <div class="absolute inset-0 flex items-center">
+                                                <div class="px-6 my-auto">
+                                                    <h4 class="text-white text-start text-lg font-semibold">Sistem Monitoring Internal Audit MIND ID</h4>
+                                                    <p class="text-white text-start font-normal">MIND ID</p>
+                                                    <p class="text-white text-start font-normal">2022</p>
+                                                    <div class="mt-4">
+                                                        <a href="#" class="text-black bg-white hover:bg-[#102E61] hover:text-white font-normal text-sm px-6 py-3">Selengkapnya</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="absolute inset-0 bg-[#33CDB2] bg-opacity-50"></div>
+                                            {{ img('theme::img/farming-fields.jpg').class('w-[410px] h-[190px] object-cover bg-cover').alt('Sekawan Media Logo')|raw }}
+                                            <div class="absolute inset-0 flex items-center">
+                                                <div class="px-6 my-auto">
+                                                    <h4 class="text-white text-start text-lg font-semibold">Aplikasi SMSCrops Syngenta</h4>
+                                                    <p class="text-white text-start font-normal">PT Syngenta Seed Indonesia</p>
+                                                    <p class="text-white text-start font-normal">2018</p>
+                                                    <div class="mt-4">
+                                                        <a href="#" class="text-black bg-white hover:bg-[#102E61] hover:text-white font-normal text-sm px-6 py-3">Selengkapnya</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    <li class="flex items-center group/solusi">
-                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Solusi</a>
-                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover/solusi:rotate-0 group-hover/solusi:text-blue-700"></i>
+                    <li class="flex items-center group/solusi h-16">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:group-hover/solusi:text-blue-700 md:p-0 md:space-x-4">solusi</a>
+                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-[#102E61] rotate-180 group-hover/solusi:rotate-0 group-hover/solusi:text-blue-700"></i>
+                        <div id="dropdown" class="hidden group my-auto md:hidden group-hover/solusi:md:block bg-white absolute w-full transform left-0 top-0 mt-[90px] z-50 group/solusi:transition group/solusi:duration-300 group/solusi:ease-in-out group/solusi:transform group/solusi:origin-top" >
+                            <div class="max-w-screen-xl mx-auto my-auto min-h-[546px] p-10 grid grid-cols-4">
+                                <div class="col-1">
+                                    <ul class="upeercase font-semibold text-sm text-start px-0 bg-white">
+                                        <li>
+                                            <a href class="flex justify-between items-center bg-[#102E61] text-white px-4 py-3 uppercase">
+                                                <p>Office</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href class="flex justify-between items-center bg-white text-black px-4 py-3 uppercase hover:bg-blue-200/20">
+                                                <p>Business</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href class="flex justify-between items-center bg-white text-black px-4 py-3 uppercase hover:bg-blue-200/20">
+                                                <p>Manufacture</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href class="flex justify-between items-center bg-white text-black px-4 py-3 uppercase hover:bg-blue-200/20">
+                                                <p>Others</p>
+                                                <i class="fa-solid fa-chevron-right fa-xs"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-1 px-4 py-2 space-y-12">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-xl text-black text-start font-bold capitalize">Administration</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4">
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">E-Office</a>
+                                                </li>
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Document Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-xl text-black text-start font-bold">GRC</h1>
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Audit Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 px-4 py-2 space-y-12">
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-xl text-black text-start font-bold capitalize">Operations</h1>
+                                        </div>
+                                        <div>
+                                            <ul class="space-y-4">
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Fleet Management</a>
+                                                </li>
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Visitor Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h1 class="text-xl text-black text-start font-bold">HR</h1>
+                                        </div>
+                                        <div>
+                                            <ul>
+                                                <li class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    <a href="#" class="font-normal">Learning Management </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1 px-2 py-2 space-y-4">
+                                    <div>
+                                        <h1 class="text-xl text-black text-start font-bold">OUR PORTOFOLIO</h1>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="w-auto h-auto bg-slate-200">
+                                                <div class="inset-0 flex items-center">
+                                                    <div class="py-2 px-2 my-auto space-y-2">
+                                                        <h4 class="text-black text-start text-md font-semibold">Sistem Monitoring Internal Audit MIND ID</h4>
+                                                        <p class="text-gray-600 text-start font-normal text-md">MIND ID - 2022</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="relative">
+                                            <div class="w-auto h-auto bg-slate-200">
+                                                <div class="inset-0 flex items-center">
+                                                    <div class="py-2 px-2 my-auto space-y-2">
+                                                        <h4 class="text-black text-start text-md font-semibold">Timah Internal Audit Management System</h4>
+                                                        <p class="text-gray-600 text-start font-normal text-md">PT Timah Tbk - 2020</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                     <li class="flex items-center group">
-                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Tentang Kami</a>
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Tentang Kami</a>
                     </li>
                     <li class="flex items-center group">
-                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Portofolio</a>
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-[#102E61] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Portofolio</a>
                     </li>
                     <li>
-                        <div class="min-w-full bg-[#102E61] h-14 flex items-center hover:bg-blue-950">
+                        <div class="min-w-full bg-[#102E61] h-16 flex items-center hover:bg-blue-950">
                             <a href="/contact"
                                 class="block py-auto pl-3 pr-4 text-white rounded md:border-0 md:hover:text-white md:p-0">
                                 <span class="px-4 py-3">
