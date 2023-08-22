@@ -1,8 +1,13 @@
 <div class="relative z-10">
     <div class="relative h-80 overflow-y-hidden overflow-x-hidden md:h-[550px]">
         <div>
-            {{ page.banner.make.class('absolute block w-full')|raw }}
-            <div class="text-start absolute block max-w-screen-xl left-1/2 -translate-x-1/2 mt-20 space-y-4 md:mt-28 md:space-y-4 dissolve-effect">
+            <div class="relative">
+                <div class="absolute inset-0 bg-[#102E61] bg-opacity-50"></div>
+                <div>
+                    {{ page.banner.make.class('w-full h-full')|raw }}
+                </div>
+            </div>
+            <div class="text-start absolute block mx-auto max-w-screen-xl transform inset-0 mt-20 space-y-4 md:mt-28 md:space-y-4 md:pr-60">
                 <h1 class="w-full text-white text-lg md:text-5xl font-bold">{{ page.banner_title }}</h1>
             </div>
         </div>

@@ -17,6 +17,10 @@
 <meta name="generator" content="{{ config_get('streams::distribution.name') }}"/>
 <meta name="description" content="{{ trans(template.meta_description) }}"/>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
 {{ template.includes.render('meta')|raw }}
 
 <title>
@@ -46,20 +50,3 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
 
 {{ template.includes.render('head')|raw }}
-
-<!-- imitate dark mode styles enabled -->
-  <style>
-  html.dark {
-          --tw-bg-opacity: 1;
-          background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
-      }
-  
-  html.dark .dark\:ml-6 {
-          margin-left: 1.5rem;
-      }
-
-  html.dark .dark\:bg-blue-500 {
-          --tw-bg-opacity: 1;
-          background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
-      }
-  </style>
