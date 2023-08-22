@@ -4,5 +4,5 @@ use Anomaly\Streams\Platform\Addon\Theme\Theme;
 
 class SekawanTheme extends Theme
 {
-
+  
 }

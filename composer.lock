@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4848d9c44a1f4783708751cf768b462",
+    "content-hash": "04da38dcac719abc00462aefe97b0417",
     "packages": [
         {
             "name": "anomaly/addon-field_type",

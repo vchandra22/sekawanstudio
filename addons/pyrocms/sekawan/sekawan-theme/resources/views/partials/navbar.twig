@@ -1,6 +1,6 @@
-<div class="topbar sticky bg-white border-b border-gray-300 dark:bg-gray-900 dark:border-none">
+<div class="topbar sticky bg-white border-b border-gray-300">
   <div
-      class="max-w-screen-xl flex flex-wrap items-center space-x-4 font-semibold text-center text-gray-400 text-xs mx-auto uppercase p-2 dark:text-white-600">
+      class="max-w-screen-xl flex flex-wrap items-center space-x-4 font-semibold text-center text-gray-400 text-xs mx-auto uppercase p-2">
       <div class="uppercase space-x-2">
         {% for link in links('topbar').get() %}
             <a href="{{ link.url }}" target={{ link.target }} class="hover:text-gray-800">{{ link.title }}</a>
@@ -11,13 +11,13 @@
       </div>
   </div>
 </div>
-<nav class="bg-white border-b border-gray-300 dark:bg-gray-900 dark:border-none">
+<nav class="bg-white border-b border-gray-300">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pl-4">
         <a href="{{ url("/") }}" class="flex items-center w-1/3">
             {{ img('theme::img/logo-sekawan.png').class('w-auto md:w-1/4 xl:w-1/4').alt('Sekawan Media Logo')|raw }}
         </a>
         <button data-collapse-toggle="navbar-default" type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-default" aria-expanded="false">
             <span class="sr-only">Main Menu</span>
             <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -26,23 +26,87 @@
                     d="M1 1h15M1 7h15M1 13h15" />
             </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul
-                class="font-medium flex flex-col items-center p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                {% for link in links('navbar').get() %}
-                    <a href="{{ link.url }}" target={{ link.target }} class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">{{ link.title }}</a>
-                {% endfor %}
-                <li>
-                    <div class="min-w-full bg-blue-900 h-14 flex items-center hover:bg-blue-950">
-                        <a href="/contact"
-                            class="block py-auto pl-3 pr-4 text-white rounded md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                            <span class="px-4 py-3">
-                                HUBUNGI KAMI
-                            </span>
-                        </a>
-                    </div>
-                </li>
-            </ul>
+        <div class="group">
+            <div id="main-nav" class="hidden w-full md:block md:w-auto z-50" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col items-center p-4 md:space-x-6 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    {# {% for link in links('navbar').get() %}
+                        <li class="flex items-center group">
+                            <a href="{{ link.url }}" target={{ link.target }} class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">{{ link.title }}</a>
+                            <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover:rotate-0 group-hover:text-blue-700"></i>
+                        </li>
+                    {% endfor %} #}
+                    <li class="flex items-center group/layanan">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Layanan</a>
+                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover/layanan:rotate-0 group-hover/layanan:text-blue-700"></i>
+                        <div id="dropdown" class="hidden group md:hidden group-hover/layanan:md:block bg-white absolute w-full transform left-0 top-0 mt-[88px] z-20 group/layanan:transition group/layanan:duration-300 group/layanan:ease-in-out group/layanan:transform group/layanan:origin-top">
+                            <div class="max-w-screen-xl mx-auto p-12 grid grid-cols-3">
+                                <div class="col-span-2">
+                                    <h3 class="text-start text-3xl text-black font-medium">Layanan</h3>
+                                    <div class="pr-8">
+                                        <hr class="my-4 border-gray-500 sm:mx-auto lg:my-8"/>
+                                    </div>
+                                    <div class="grid grid-cols-2 items-center">
+                                        <div class="cols-1 space-y-12">
+                                            <p>Melayani berbagai kebutuhan pembuatan aplikasi dan website yang menjangkau area UMKM hingga bisnis berskala Enterprise.</p>
+                                            <div class="flex justify-between items-end">
+                                                <div class="relative group/selengkapnya space-y-1">
+                                                    <a href="" class="uppercase text-lg font-regular w-1/4 text-blue-950">
+                                                        Selengkapnya
+                                                    </a>
+                                                    <div class="absolute left-0 right-0 h-[3px] bg-blue-950 w-1/3 hover:transition group-hover/selengkapnya:duration-1000 group-hover/selengkapnya:ease-in-out group-hover/selengkapnya:w-full"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="cols-1 mx-4">
+                                        <ul class="space-y-8">
+                                            <li>
+                                                <a href="#" class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    Jasa Pembuatan Aplikasi Web
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    Jasa Pembuatan Aplikasi Mobile
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="text-black hover:transition group-hover:duration-1000 group-hover:ease-in-out hover:text-teal-600">
+                                                    Jasa Pembuatan Website
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-1">
+                                    {{ img('theme::img/carousel-img_2.jpg').class('w-full h-full object-cover bg-cover').alt('Sekawan Media Logo')|raw }}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-center group/solusi">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Solusi</a>
+                        <i class="fa-solid fa-chevron-down ml-2 mr-4 text-gray-900 rotate-180 group-hover/solusi:rotate-0 group-hover/solusi:text-blue-700"></i>
+                    </li>
+                    <li class="flex items-center group">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Tentang Kami</a>
+                    </li>
+                    <li class="flex items-center group">
+                        <a href="#" class="block uppercase py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:space-x-4">Portofolio</a>
+                    </li>
+                    <li>
+                        <div class="min-w-full bg-[#102E61] h-14 flex items-center hover:bg-blue-950">
+                            <a href="/contact"
+                                class="block py-auto pl-3 pr-4 text-white rounded md:border-0 md:hover:text-white md:p-0">
+                                <span class="px-4 py-3">
+                                    HUBUNGI KAMI
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
